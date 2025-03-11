@@ -18,12 +18,14 @@ public class Main {
         product.price = price;
         product.quantity = quantity;
 
+        System.out.println("Product data: " + product);
+
         int addStock = 5;
         product.addProducts(addStock);
-        System.out.println("Product data: " + product);
+        System.out.println("Updated data: " + product);
 
         int removeStock = 3;
         product.removeProducts(removeStock);
-        System.out.println("Product data: " + product);
+        System.out.println("Updated data: " + product);
     }
 }
