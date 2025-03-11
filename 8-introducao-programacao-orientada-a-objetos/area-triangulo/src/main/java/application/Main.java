@@ -3,33 +3,28 @@ package application;
 import entities.Triangle;
 
 import java.util.Locale;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
         Locale.setDefault(Locale.US);
-        Scanner sc = new Scanner(System.in);
 
         Triangle triangleX, triangleY;
         triangleX = new Triangle();
         triangleY = new Triangle();
 
         System.out.println("Enter the measures of triangle X: ");
-        triangleX.sideA = sc.nextDouble();
-        triangleX.sideB = sc.nextDouble();
-        triangleX.sideC = sc.nextDouble();
+        triangleX.sideA = 3.00;
+        triangleX.sideB = 4.00;
+        triangleX.sideC = 5.00;
 
         System.out.println("Enter the measures of triangle Y: ");
-        triangleY.sideA = sc.nextDouble();
-        triangleY.sideB = sc.nextDouble();
-        triangleY.sideC = sc.nextDouble();
+        triangleY.sideA = 7.50;
+        triangleY.sideB = 4.50;
+        triangleY.sideC = 4.02;
 
-        double p = (triangleX.sideA + triangleX.sideB + triangleX.sideC) / 2.0;
-        double areaX = Math.sqrt(p * (p - triangleX.sideA) * (p - triangleX.sideB) * (p - triangleX.sideC));
-
-        p = (triangleY.sideA + triangleY.sideB + triangleY.sideC) / 2.0;
-        double areaY = Math.sqrt(p * (p - triangleY.sideA) * (p - triangleY.sideB) * (p - triangleY.sideC));
+        double areaX = triangleX.surface();
+        double areaY = triangleY.surface();
 
         System.out.printf("Area of triangle X: %.4f%n", areaX);
         System.out.printf("Area of triangle Y: %.4f%n", areaY);
@@ -39,7 +34,6 @@ public class Main {
         } else {
             System.out.println("Larger area: Y");
         }
-        sc.close();
     }
 
 }
