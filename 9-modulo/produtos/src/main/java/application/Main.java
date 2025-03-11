@@ -11,9 +11,14 @@ public class Main {
 
         String name = "TV";
         double price = 900.00;
-//        int quantity = 10;
+        int quantity = 10;
 
-        Product product = new Product(name, price);
+        Product product = new Product(name, price, quantity);
+        product.setName("Computer");
+        System.out.println("Updated name: " + product.getName());
+
+        product.setPrice(1000.00);
+        System.out.println("Updated price: " + product.getPrice());
 
         System.out.println("Product data: " + product);
 
