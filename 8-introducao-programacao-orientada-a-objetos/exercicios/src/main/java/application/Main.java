@@ -3,6 +3,10 @@ package application;
 import entities.Employee;
 import entities.Rectangle;
 import entities.Student;
+import util.CurrencyConverter;
+
+import java.util.Locale;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -12,6 +16,8 @@ public class Main {
         exercise2();
         System.out.println();
         exercise3();
+        System.out.println();
+        exercise4();
     }
 
     public static void exercise1() {
@@ -52,5 +58,20 @@ public class Main {
         student2.grade2 = 20.00;
         student2.grade3 = 15.00;
         System.out.println(student2);
+    }
+
+    public static void exercise4() {
+
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("What is the dollar price? ");
+        double price = sc.nextDouble();
+
+        System.out.print("How to many dollars will be bought? ");
+        double dollars = sc.nextDouble();
+
+        System.out.print("Amount to be paid in reais = " + CurrencyConverter.convert(price, dollars));
+        sc.close();
     }
 }
