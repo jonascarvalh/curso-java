@@ -33,7 +33,7 @@ public class Main {
         System.out.println("Busy rooms:");
         for (int i = 0; i < QTY_ROOMS; i++) {
             if (rentVect[i] != null) {
-                System.out.printf("%d: %s, %s\n", i, rentVect[i].getName(), rentVect[i].getEmail());
+                System.out.printf("%d: %s\n", i, rentVect[i]);
             }
         }
 
