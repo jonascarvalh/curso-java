@@ -29,7 +29,6 @@ public class Main {
         LocalDateTime finish = LocalDateTime.parse(sc.nextLine(), dtf);
 
         Vehicle vehicle = new Vehicle(carModel);
-
         CarRental cr = new CarRental(start, finish, vehicle);
 
         System.out.print("Entre com o preço por hora: ");
